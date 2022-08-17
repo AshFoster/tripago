@@ -6,11 +6,12 @@ import './TripList.css'
 
 export default function TripList() {
     const [url, setUrl] = useState('https://3000-ashfoster-tripago-s91dio11d2c.ws-eu61.gitpod.io/trips')
-    const { data: trips } = useFetch(url)
+    const { data: trips, isPending } = useFetch(url)
         
     return (
         <div className="trip-list">
             <h2>Trip List</h2>
+            {isPending && <div>Loading trips...</div>}
             <ul>
                 {trips && trips.map(trip => (
                     <li key={trip.id}>
