@@ -5,7 +5,7 @@ import { useFetch } from '../hooks/useFetch'
 import './TripList.css'
 
 export default function TripList() {
-    const [url, setUrl] = useState('https://3000-ashfoster-tripago-s91dio11d2c.ws-eu61.gitpod.io/tripss')
+    const [url, setUrl] = useState('https://3000-ashfoster-tripago-s91dio11d2c.ws-eu62.gitpod.io/trips')
     const { data: trips, isPending, error } = useFetch(url)
         
     return (
@@ -22,10 +22,10 @@ export default function TripList() {
                 ))}
             </ul>
             <div className="filters">
-                <button onClick={() => setUrl('https://3000-ashfoster-tripago-s91dio11d2c.ws-eu61.gitpod.io/trips?loc=europe')}>
+                <button onClick={() => setUrl('https://3000-ashfoster-tripago-s91dio11d2c.ws-eu62.gitpod.io/trips?loc=europe')}>
                     European Trips
                 </button>
-                <button onClick={() => setUrl('https://3000-ashfoster-tripago-s91dio11d2c.ws-eu61.gitpod.io/trips')}>
+                <button onClick={() => setUrl('https://3000-ashfoster-tripago-s91dio11d2c.ws-eu62.gitpod.io/trips')}>
                     All Trips
                 </button>
             </div>
